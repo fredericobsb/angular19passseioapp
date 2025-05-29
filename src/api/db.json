@@ -1,0 +1,34 @@
+{
+  "categorias": [
+    {
+      "id": "1",
+      "nome": "restaurantes",
+      "descricao": "Lugares para alimentação"
+    },
+    {
+      "id": "2",
+      "nome": "Shoopings",
+      "descricao": "Lugares para compras e passeios"
+    },
+    {
+      "id": "3",
+      "nome": "Teste2 - super arroh",
+      "descricao": "teste2 - descricao arroh"
+    },
+    {
+      "id": "",
+      "nome": "Teste",
+      "descricao": "teste"
+    },
+    {
+      "id": "884d",
+      "nome": "Teste2 - alterou",
+      "descricao": "teste2 - alterou arroh"
+    },
+    {
+      "id": "0d82",
+      "nome": "teste arroh super 123",
+      "descricao": "lorem impsum dot sit amet"
+    }
+  ]
+}
