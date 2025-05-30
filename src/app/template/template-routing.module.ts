@@ -11,6 +11,10 @@ const routes: Routes = [
         {
           path:'lugares', loadChildren: () => import('../lugares/lugares.module')
             .then(l => l.LugaresModule)
+        },
+        {
+          path:'galeria', loadChildren: () => import('../galeria/galeria.module')
+            .then(g => g.GaleriaModule)
         }
       ]
      },  
