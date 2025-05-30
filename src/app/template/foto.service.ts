@@ -7,7 +7,7 @@ import { from, map, Observable, of, switchMap } from 'rxjs';
 })
 export class FotoService {
 
-     private readonly apiUrl = 'http://localhost:3000/fotos';
+  private readonly apiUrl = 'http://localhost:3000/fotos';
 
   constructor(private http: HttpClient) {}
 
@@ -47,5 +47,10 @@ export class FotoService {
                 this.http.post<any>(this.apiUrl, fotoObj)
             )
         );
+  }
+
+  getFotoById(id: string): Observable<any> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<any>(url);
   }
 }
