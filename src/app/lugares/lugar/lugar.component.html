@@ -1,0 +1,93 @@
+<div class="p-6 max-w-lg mx-auto bg-white shadow-lg rounded-lg mt-6">
+    <h2 class="text-2x1 font-semibold text-gray-700 mg-4">Novo Lugar</h2>
+     <form id="lugarForm" [formGroup]="camposForm" (ngSubmit)="onSubmit()">
+        <div class="mb-4">
+            <label for="nome" class="block text-gray-600 font-medium mb-2">Nome do Lugar</label>
+            <input 
+                type="text"
+                id="nome"
+                name="nome"
+                formControlName="nome"
+                placeholder="Ex: Praia do Sol, Restaurante Estrela"
+                class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
+            />
+            <span class="text-red-500 text-sm" *ngIf="isInvalidField('nome')" class="text-red-600 mt-1">Campo Obrigatório</span>
+        </div>
+
+        <div class="mb-4">
+            <label for="nome" class="block text-gray-600 font-medium mb-2">Categoria</label>
+            <select
+            id="categoria"
+            name="categoria"
+            formControlName="categoria"
+            class="w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400">
+            <!--AS ASPAS SIMPLES DENTRO AS DUPLAS FAZEM COM QUE A OPTION SEJA SELECIONADA POR PADRAO-->
+            <option [value]="''">Selecione uma categoria</option> 
+            <option *ngFor="let cat of listaCategorias" [value]="cat.nome">
+            {{ cat.nome }}
+            </option>
+        </select>
+         <span class="text-red-500 text-sm" *ngIf="isInvalidField('categoria')" class="text-red-600 mt-1">Campo Obrigatório</span>
+        </div>
+
+         <div class="mb-4">
+            <label for="localizacao" class="block text-gray-600 font-medium mb-2">Localização</label>
+            <input 
+                type="text"
+                id="localizacao"
+                name="localizacao"
+                formControlName="localizacao"
+                placeholder="Ex: São Paulo"
+                class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
+            />
+            <span class="text-red-500 text-sm" *ngIf="isInvalidField('localizacao')" class="text-red-600 mt-1">Campo Obrigatório</span>
+            
+        </div>
+
+        <div class="mb-4">
+            <label for="urlFoto" class="block text-gray-600 font-medium mb-2">Foto</label>
+            <input 
+                type="file"
+                id="foto"
+                (change)="onFileSelected($event)"
+                class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400"
+            />
+             <!-- Mensagem de erro -->
+            <span class="text-red-500 text-sm" *ngIf="fotoError" class="text-red-600 mt-1">{{ fotoError }}</span>
+            
+            <!-- Preview + botão remover -->
+            <div *ngIf="fotoPreview" class="mb-4">
+                <label class="block text-gray-600 font-medium mb-2">Pré-visualização:</label>
+                <img [src]="fotoPreview" alt="Pré-visualização da foto" class="w-32 h-32 object-cover rounded shadow mb-2">
+                <button type="button"
+                    (click)="removerFoto()"
+                    class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700"
+                >
+                    Remover Foto
+                </button>
+            </div>
+        </div>
+
+         <div class="mb-4">
+            <label for="avaliacao" class="block text-gray-600 font-medium mb-2">Avaliação</label>
+            <select
+                id="avaliacao"
+                name="avaliacao"
+                formControlName="avaliacao"
+                class="w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400"
+            >
+                <option [value]="''">Selecione uma avaliação</option>
+                <option [value]="1">1 - Ruim</option>
+                <option [value]="2">2 - Regular</option>
+                <option [value]="3">3 - Bom</option>
+                <option [value]="4">4 - Muito Bom</option>
+                <option [value]="5">5 - Excelente</option>
+            </select>
+             <span class="text-red-500 text-sm" *ngIf="isInvalidField('avaliacao')" class="text-red-600 mt-1">Campo Obrigatório</span>
+        </div>
+         <button type="submit" 
+            class="w-full bg-blue-600 text-white font-semibold p-3 rounded shadow hover:bg-blue-700">
+            Cadastrar Lugar
+        </button>
+     </form>
+</div>

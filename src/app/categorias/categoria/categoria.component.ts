@@ -30,6 +30,7 @@ export class CategoriaComponent {
               error: erro => console.error('------- deu pau no salvamento => ', erro)
           })
     }
+    this.camposForm.reset();
   }
 
   isInvalidField(nomeCampo:string): boolean{

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './template/layout/layout.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent
