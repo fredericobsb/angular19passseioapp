@@ -1,0 +1,66 @@
+{
+  "categorias": [
+    {
+      "id": "1",
+      "nome": "Pé de serra",
+      "descricao": "Coronel 1889"
+    },
+    {
+      "id": "2",
+      "nome": "Roots",
+      "descricao": "Baila Roots"
+    },
+    {
+      "id": "3",
+      "nome": "Piseiro",
+      "descricao": "Kakareko"
+    },
+    {
+      "id": "4",
+      "nome": "Rock",
+      "descricao": "Vikings"
+    },
+    {
+      "id": "5",
+      "nome": "Bagaceira",
+      "descricao": "Gauchinho e afins"
+    }
+  ],
+  "fotos": [
+    
+  ],
+  "lugares": [
+    {
+      "id": "74a6",
+      "nome": "Beco da codorna",
+      "categoria": "Pé de serra",
+      "localizacao": "GOIANIA",
+      "fotoId": "d905",
+      "avaliacao": "4"
+    },
+    {
+      "id": "ae7a",
+      "nome": "Coronel 1889",
+      "categoria": "Pé de serra",
+      "localizacao": "GOIANIA",
+      "fotoId": "5b30",
+      "avaliacao": "5"
+    },
+    {
+      "id": "17c4",
+      "nome": "Teste pé de serra 1",
+      "categoria": "Pé de serra",
+      "localizacao": "GOIANIA",
+      "fotoId": "f068",
+      "avaliacao": "4"
+    },
+    {
+      "id": "6ac0",
+      "nome": "Teste pé de serra 2",
+      "categoria": "Pé de serra",
+      "localizacao": "GOIANIA",
+      "fotoId": "b8d5",
+      "avaliacao": "4"
+    }
+  ]
+}
